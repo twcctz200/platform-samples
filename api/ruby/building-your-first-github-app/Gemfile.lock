@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    base64 (0.3.0)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -27,25 +28,33 @@ GEM
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
     jwt (2.1.0)
+    logger (1.7.0)
     multipart-post (2.3.0)
-    mustermann (2.0.2)
+    mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
     octokit (4.9.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     public_suffix (5.0.1)
-    rack (2.2.8.1)
-    rack-protection (2.2.3)
-      rack
+    rack (3.2.3)
+    rack-protection (4.2.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
     ruby2_keywords (0.0.5)
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sinatra (2.2.3)
-      mustermann (~> 2.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.3)
+    sinatra (4.2.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.2.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    tilt (2.1.0)
+    tilt (2.6.1)
 
 PLATFORMS
   ruby
@@ -53,7 +62,7 @@ PLATFORMS
 DEPENDENCIES
   jwt (~> 2.1)
   octokit (~> 4.0)
-  sinatra (~> 2.2)
+  sinatra (~> 4.2, >= 4.2.0)
 
 BUNDLED WITH
-   1.14.6
+   2.3.27
