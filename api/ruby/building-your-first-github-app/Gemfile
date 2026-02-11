@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
 gem "jwt", "~> 2.1"
-gem "octokit", "~> 4.0"
+gem "octokit", "~> 4.23", ">= 4.23.0"
 gem "sinatra", "~> 2.2"
